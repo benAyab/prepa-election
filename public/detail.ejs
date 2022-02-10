@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/globalStyle.css">
+    <link rel="stylesheet" href="/css/feather.css">
+
+    <title><%= candidate.prenom %></title>
+</head>
+<body style="color: rgb(177, 167, 167);">
+    <nav class="level">
+        <div class="level-left">
+            <p class="level-item" id="backbtn">
+                <a class="button is-success"> 
+                    <i class="feather feather-arrow-left">
+                        Retour
+                    </i> 
+                </a>
+            </p>
+        </div>
+  </nav>
+    <div class="columns">
+        <div class="column is-half is-offset-one-fifth">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-128x128">
+                        <%- '<img src="/images/' +candidate.img+ '" alt="image">' %>
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                        <p class="title is-4"> <%= candidate.prenom+" "+candidate.nom %></p>
+                        <p class="subtitle is-6"> <%= candidate.parti%> </p>
+                        </div>
+                    </div>
+            
+                    <div class="content">
+                            <div class="notification is-primary">
+                                <nav class="level is-mobile">
+                                    <div class="level-item has-text-centered">
+                                    <div>
+                                        <p class="heading">Budget</p>
+                                        <p class="title"> <%= candidate.budget %> &#x20AC;</p>
+                                    </div>
+                                    </div>
+                                    <div class="level-item has-text-centered">
+                                    <div>
+                                        <p class="heading">Age</p>
+                                        <p class="title"> <%= candidate.age %> ans </p>
+                                    </div>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/detail.script.js"></script>
+</body>
+</html>
